@@ -8,10 +8,6 @@ testing {
         val test by getting(JvmTestSuite::class) {
             useJUnitJupiter()
         }
-        val integrationTest by registering(JvmTestSuite::class) {
-            this.testType = TestSuiteType.INTEGRATION_TEST
-            useJUnitJupiter()
-        }
     }
 }
 

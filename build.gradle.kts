@@ -1,7 +1,7 @@
 plugins {
     kotlin("jvm") version "1.9.23"
     id("jacoco-report-aggregation")
-    //id("com.autonomousapps.dependency-analysis") version "1.31.0"
+    id("com.autonomousapps.dependency-analysis") version "1.31.0"
 }
 
 group = "de.muellerml"
@@ -22,11 +22,4 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(21)
-}
-reporting {
-    reports {
-        val integrationTestReport by creating(JacocoCoverageReport::class) {
-            testType = TestSuiteType.INTEGRATION_TEST
-        }
-    }
 }
